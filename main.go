@@ -28,6 +28,11 @@ func main() {
 	for {
 
 		fmt.Print("What is the current temperature in " + originUnit + " ? ")
+		fmt.Scanln(originValue)
+
+		if err != nil {
+			printError(errReadingInput)
+		}
 
 		fmt.Print("Would you like to convert another temperature ? (y/n) ")
 
